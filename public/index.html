@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <title><%= VUE_APP_TITLE %></title>
+    <meta content="<%= VUE_APP_AUTHOR %>" name="author" />
+    <link href="<%= BASE_URL %>static/css/loading.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="http://api.map.baidu.com/api?v=2.0&ak=ZWa3NTy9IBaIqTsoOZc223GH3WtYe2Ho"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_3324610_9q6ckoqy9n.css"
+    />
+  </head>
+  <body>
+    <noscript>
+      非常抱歉鉴于安全考量,您无法查看<%= VUE_APP_TITLE %>
+      源代码，该系统基于vue开发
+    </noscript>
+    <div id="app">
+      <div class="first-loading-wrp">
+        <div class="loading-wrp">
+          <span class="dot dot-spin">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </div>
+        <h1><%= VUE_APP_TITLE %></h1>
+      </div>
+    </div>
+    <script>
+      ;/^http(s*):\/\//.test(location.href) ||
+        alert('基于vue开发的项目需要部署到服务器下访问')
+
+      window.onresize = function () {
+        setScale()
+      }
+      function setScale() {
+        let designWidth = 3536 //设计稿的宽度，根据实际项目调整
+        let designHeight = 1352 //设计稿的高度，根据实际项目调整
+
+        // 缩放比
+        let scale =
+          document.documentElement.clientWidth /
+            document.documentElement.clientHeight <
+          designWidth / designHeight
+            ? document.documentElement.clientWidth / designWidth
+            : document.documentElement.clientHeight / designHeight
+
+        // 获取所有类名为  trans-common 的元素，设置 transform 属性
+        let selectorAll = document.querySelectorAll('.trans-common')
+        for (let i = 0; i < selectorAll.length; i++) {
+          selectorAll[i].style = 'transform: scale(' + scale + '); '
+        }
+      }
+    </script>
+  </body>
+</html>

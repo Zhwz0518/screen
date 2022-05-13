@@ -1,0 +1,96 @@
+{
+  "name": "edu-manager-web",
+  "version": "1.0.0",
+  "author": "chuzhixin",
+  "license": "Mozilla Public License Version 2.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lint:style": "stylelint-config-prettier-check",
+    "template": "plop",
+    "clear": "npm cache clean -f&&rimraf node_modules&&cnpm i&&increase-memory-limit"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@antv/g2plot": "^2.4.15",
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.9.3",
+    "echarts": "^4.9.0",
+    "element-china-area-data": "^5.0.2",
+    "element-ui": "^2.13.2",
+    "js-cookie": "^2.2.1",
+    "jsencrypt": "^3.0.0-rc.1",
+    "jsplumb": "^2.14.7",
+    "lodash": "^4.17.20",
+    "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
+    "qrcodejs2": "^0.0.2",
+    "qs": "^6.9.4",
+    "remixicon": "^2.5.0",
+    "screenfull": "^5.0.2",
+    "vue": "^2.6.12",
+    "vue-calendar-component": "^2.8.2",
+    "vue-echarts": "^5.0.0-beta.0",
+    "vue-i18n": "^8.22.1",
+    "vue-pdf": "^4.3.0",
+    "vue-print-nb": "^1.7.5",
+    "vue-router": "^3.4.7",
+    "vuedraggable": "^2.24.2",
+    "vuex": "^3.5.1",
+    "wangeditor": "^4.4.0",
+    "zx-templates": "^0.0.26"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.8",
+    "@vue/cli-plugin-eslint": "^4.5.8",
+    "@vue/cli-service": "^4.5.8",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "chokidar": "^3.4.3",
+    "compression-webpack-plugin": "^6.0.3",
+    "eslint": "^7.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^7.1.0",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "lint-staged": "^10.4.2",
+    "plop": "^2.7.4",
+    "prettier": "^2.1.2",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "stylelint": "^13.7.2",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recess-order": "^2.2.0",
+    "svg-sprite-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.12",
+    "webpackbar": "^4.0.0"
+  },
+  "keywords": [
+    "vue",
+    "admin",
+    "dashboard",
+    "element-ui",
+    "vue-admin",
+    "element-admin",
+    "boilerplate",
+    "admin-template",
+    "management-system"
+  ],
+  "engines": {
+    "node": ">=8.9",
+    "npm": ">= 3.0.0"
+  }
+}
